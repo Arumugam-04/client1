@@ -14,7 +14,7 @@ const Types = () => {
   useEffect(() => {
     const fetchTypes = async() => {
       try {
-        const res = await fetch(`http://localhost:5000/room/find/types`, {
+        const res = await fetch(`https://backend-3-4o1g.onrender.com/auth/login`, {
           headers: {
             'Authorization': `Bearer ${token}`
           }

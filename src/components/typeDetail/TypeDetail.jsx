@@ -27,7 +27,7 @@ const TypeDetail = () => {
   useEffect(() => {
     const fetchRoom = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/room/find/${id}`, {
+        const res = await fetch(`https://backend-3-4o1g.onrender.com/auth/login`, {
           headers: {
             'Authorization': `Bearer ${token}`
           },
@@ -77,7 +77,7 @@ const TypeDetail = () => {
 
 
     try {
-      const res = await fetch(`http://localhost:5000/room/bookRoom/${id}`, {
+      const res = await fetch(`https://backend-3-4o1g.onrender.com/auth/login`, {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`

@@ -40,13 +40,13 @@ const Create = () => {
         formData.append("filename", filename);
         formData.append("image", img);
 
-        await fetch(`http://localhost:5000/upload/image`, {
+        await fetch(`https://backend-3-4o1g.onrender.com/auth/login`, {
           method: "POST",
           body: formData,
         });
 
       // upload product and navigate to product
-      const res = await fetch("http://localhost:5000/room", {
+      const res = await fetch("https://backend-3-4o1g.onrender.com/auth/login", {
         headers: {
           "Content-Type": "application/json",
         },
