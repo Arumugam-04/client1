@@ -18,7 +18,7 @@ const Signup = () => {
     e.preventDefault()
 
     try {
-      const res = await fetch(`https://backend-3-4o1g.onrender.com/auth/login`, {
+      const res = await fetch(`https://backend-3-4o1g.onrender.com/auth/register`, {
         headers: {
           'Content-Type': 'application/json'
         },
