@@ -49,7 +49,7 @@ import (AiOutlineCloseCircle) from 'react-icons/ai'
             method:"POST",
             body: fromDate
           })
-        }
+        
         const res = await fetch(`https://backend-3-4o1g.onrender.com/auth/register`,{
           headers:{
             'Content-Type': 'application/json',
@@ -63,7 +63,7 @@ import (AiOutlineCloseCircle) from 'react-icons/ai'
             type,
             photo: filename,
             price,
-            review
+            review,
           }}
         })
 
@@ -122,6 +122,10 @@ import (AiOutlineCloseCircle) from 'react-icons/ai'
     </div>
   </div>
  )
+  }
+
+export default Create;
+
  
 
   
