@@ -1,12 +1,11 @@
-import React, { useState } from "react"
+import React,{ useRef } from "react"
 import classes from "./typeDetail.module.css"
-import img from "../../assets/img3.jpg"
-import { AiFillStar } from "react-icons/ai"
+import img from "../../assets/img.jpg"
 import { useEffect } from "react"
-import { useRef } from "react"
-import { useParams } from "react-router-dom"
+import { useState } from "react"
 import { useSelector } from 'react-redux'
-import { getDatesInRange, isUnavailable } from "../../utils/dateFunc"
+import { useParams } from "react-router-dom"
+import { AiFillStar } from "react-icons/ai"
 
 const TypeDetail = () => {
   const {startDate: startDateRedux, endDate: endDateRedux} = useSelector((state) => state.search)

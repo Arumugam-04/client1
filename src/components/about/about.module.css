@@ -3,7 +3,7 @@
     width: 100%;
 }
 
-.wrapper{
+.wrapper{ 
     height: 100%;
     width: 100%;
     position: relative;
@@ -28,7 +28,7 @@
     left: 10%;
 }
 
-.titles > .subtitle{
+.titles > .subtitle{ 
     color: #efefef;
     font-weight: 500;
     font-size: 38px;
@@ -57,7 +57,7 @@
     padding-right: 2.5rem;
 }
 
-.inputContainer{
+.inputContainer{  
    display: flex;
    flex-direction: column;
    gap: 24px;

@@ -44,19 +44,27 @@
   font-size: 34px;
   font-weight: bold;
   color: #ee9d06;
-}
+}  
 
 .center {
   flex: 2;
   display: flex;
   justify-content: center;
-}
-
+} 
+ 
 .center > .list {
   display: flex;
   align-items: center;
   list-style: none;
   gap: 2rem;
+}
+.center> .list > .listItem{
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 22px;
+  transition:200ms all;
+  cursor: pointer;
+  color: #222;
 }
 
 .listItem > a{
@@ -73,7 +81,7 @@
 }
 
 .right {
-  flex: 1;
+  flex: 1; 
   display: flex;
   justify-content: flex-end;
   align-items: center;

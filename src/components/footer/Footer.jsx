@@ -3,7 +3,7 @@ import classes from "./footer.module.css"
 
 const Footer = () => {
   return (
-    <footer className={classes.container}>
+
       <div className={classes.wrapper}>
         <div className={classes.col}>
           <h2 className={classes.title}>FAQ</h2>
@@ -24,7 +24,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
+
   )
 }
 

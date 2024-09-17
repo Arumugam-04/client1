@@ -1,16 +1,15 @@
-import React, { useEffect, useState } from "react"
-import classes from "./SuggestedPlaces.module.css"
-import { AiFillStar } from "react-icons/ai"
-import { Link, useParams } from 'react-router-dom'
-import { suggestedPlacesData } from "../../data/data"
-import img from '../../assets/img2.jpg'
-import {useSelector} from 'react-redux'
+import React from 'react'
+import { useEffect } from 'react'
+import { useState } from 'react'
+import { useSelector } from 'react-redux'
+import { useParams } from 'react-router-dom'
+import classes from '/suggestedPlace.module.css  '
 
 const SuggestedPlaces = () => {
 
   const [estates, setEstates] = useState([])
   const { token } = useSelector((state) => state.auth)
-  const { type } = useParams()
+
 
   useEffect(() => {
     const fetchTypeRooms = async () => {
@@ -20,9 +19,8 @@ const SuggestedPlaces = () => {
             "Authorization": `Bearer ${token}`
           }
         })
-        const estates = await res.json()
-        console.log(estates)
-        setEstates(estates)
+        const data = await res.json()
+        setEstates(data)
       } catch (error) {
         console.error(error)
       }

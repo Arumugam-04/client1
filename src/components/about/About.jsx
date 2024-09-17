@@ -51,7 +51,7 @@ const About = () => {
             <span>First day <BiHappy className={classes.icon}/></span>
             <input type="text" placeholder="Type date..." onChange={(e) => setStartDate(e.target.value)}/>
           </div>
-          <div className={classes.inputContainer}>
+          <div className={classes.inputContainer}> 
             <span>Last day <FaUmbrellaBeach className={classes.icon}/></span>
             <input type="text" placeholder="Type date..." onChange={(e) => setEndDate(e.target.value)}/>
           </div>

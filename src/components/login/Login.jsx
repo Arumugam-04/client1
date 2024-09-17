@@ -1,4 +1,4 @@
-import img from '../../assets/img2.jpg'
+import img from 'react'
 
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'

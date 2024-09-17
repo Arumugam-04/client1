@@ -1,16 +1,13 @@
-import React from 'react'
-import { useEffect } from 'react'
-import { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import classes from './type.module.css'
-import img1 from '../../assets/img3.jpg'
-import { AiFillStar } from 'react-icons/ai'
-import { Link, useParams } from 'react-router-dom'
+import {Link, useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-
+import { AiFillStar } from 'react-icons/ai'
 const Type = () => {
     const [estates, setEstates] = useState([])
-    const { token } = useSelector((state) => state.auth)
     const { type } = useParams()
+    const { token } = useSelector((state) => state.auth)
+    
     console.log(type)
 
     useEffect(() => {
@@ -42,15 +39,15 @@ const Type = () => {
                     {estates.map((estate) => (
                         <Link to={`/typeDetail/${estate._id}`} className={classes.place} key={estate._id}>
                             <div className={classes.imgWrapper}>
-                                <img src={img1} alt="" />
+                                <img src={"http://localhost:5000/images/${estate.photo}"} />
                             </div>
                             <div className={classes.titleAndReview}>
                                 <span>{estate.title}</span>
-                                <span className={classes.review}><AiFillStar className={classes.icon} />{estate.review} (2)</span>
+                                <span className={classes.review}><AiFillStar className={classes.icon} />{estate.review} </span>
                             </div>
                             <div className={classes.countryAndPrice}>
                                 <span>Country: <span>{estate.country}</span></span>
-                                <span className={classes.price}>{estate.price || 34}$ / <span>per person</span></span>
+                                <span className={classes.price}>{estate.price}$ / <span>per person</span></span>
                             </div>
                         </Link>
                     ))}

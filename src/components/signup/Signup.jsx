@@ -1,10 +1,11 @@
 import React from 'react'
-import classes from './signup.module.css'
-import img from '../../assets/img3.jpg'
+import img from '../../assets/img5.jpg'
+import { useState } from 'react'
 import { useDispatch } from 'react-redux' 
 import { register } from '../../redux/authSlice'
 import { Link, useNavigate } from 'react-router-dom'
-import { useState } from 'react'
+import classes from './signup.module.css'
+import { throws } from 'assert'
 
 const Signup = () => {
   const navigate = useNavigate()
@@ -25,6 +26,9 @@ const Signup = () => {
         method: 'POST',
         body: JSON.stringify({ username, email, password })
       })
+      if(res.status !== 201){
+        throw new Error("Register failed")
+      }
       const data = await res.json()
       dispatch(register(data))
       navigate('/')
