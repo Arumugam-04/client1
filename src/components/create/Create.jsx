@@ -122,7 +122,7 @@ import (AiOutlineCloseCircle) from 'react-icons/ai'
     </div>
   </div>
  )
-  }
+
 
 export default Create;
 
