@@ -1,9 +1,10 @@
-import React from 'react'
-import { useEffect } from 'react'
-import { useState } from 'react'
-import { useSelector } from 'react-redux'
-import { useParams } from 'react-router-dom'
-import classes from '/suggestedPlace.module.css  '
+import React, { useEffect, useState } from "react"
+import classes from "./SuggestedPlaces.module.css"
+import { AiFillStar } from "react-icons/ai"
+import { Link, useParams } from 'react-router-dom'
+import { suggestedPlacesData } from "../../data/data"
+import img from '../../assets/img3.jpg'
+import {useSelector} from 'react-redux'
 
 const SuggestedPlaces = () => {
 
